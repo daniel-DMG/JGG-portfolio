@@ -7,9 +7,9 @@
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        /* ============================================
+ /* ============================================
    CSS Variables & Reset
-============================================ */
+  ============================================ */
 :root {
     --primary-color: #1a1a2e;
     --secondary-color: #16213e;
@@ -1223,7 +1223,7 @@ animation effects
         <!-- Call to Action Buttons -->
         <div class="button-group">
             <a href="#experience" class="btn btn-primary">View My Work</a>
-            <a href="#" class="btn btn-secondary">Download CV</a>
+            <a href="document/Updated cv and certificate.pdf" class="btn btn-secondary">Download CV</a>
             <a href="#contact" class="btn btn-primary">Get In Touch</a>
         </div>
     </div>
@@ -1320,6 +1320,7 @@ animation effects
             <h3>Bachelor of Economics & Finance</h3>
             <p class="institution">Kenyatta University</p>
             <p class="duration">2021 – 2025</p>
+            <a href="document/Updated cv and certificate.pdf">View</a>
         </div>
     </div>
 
@@ -1330,12 +1331,12 @@ animation effects
             
             <div class="card cert-item">
                 <span>CX for Business Success (HP LIFE)</span>
-                <a href="#">View</a>
+                <a href="document/Updated cv and certificate.pdf">View</a>
             </div>
 
             <div class="card cert-item">
                 <span>Basics of Finance (HP LIFE)</span>
-                <a href="#">View</a>
+                <a href="document/Updated cv and certificate.pdf">View</a>
             </div>
 
         </div>
@@ -1396,7 +1397,7 @@ animation effects
                         <a href="https://www.linkedin.com/in/jonathan-githaiga-243080226?utm_source=share_via&utm_content=profile&utm_medium=member_android"><i class="fab fa-linkedin-in"></i></a>
                         <a href="https://x.com/jonathan364477"><i class="fab fa-twitter"></i></a>
                         <a href="https://www.facebook.com/jgg.861561"><i class="fab fa-facebook"></i></a>
-                        <a href="https://wa.me/254791065062?text=Hello%20I%20have%20a%20question"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://wa.me/254791065062?text=Hello%20I%20want%20I%20to%20I%20work%20I%20with%20I%20us"><i class="fab fa-whatsapp"></i></a>
                         <a href="https://www.instagram.com/jgg76466795?igsh=cmt6dm55YW04am1y"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
@@ -1407,7 +1408,7 @@ animation effects
         <div class="contact-form">
             <h3 class="form-title">Send a Message</h3>
 
-            <form action="#" method="POST" class="message-form">
+           <form action="https://formspree.io/f/xojpvznk" method="POST">
 
                 <div class="form-group">
                     <input type="text" name="name" placeholder="Your Name" required>
@@ -1418,15 +1419,11 @@ animation effects
                 </div>
 
                 <div class="form-group">
-                    <input type="text" name="subject" placeholder="Subject">
-                </div>
-
-                <div class="form-group">
                     <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
                 </div>
               
                 <button type="submit" class="btn btn-primary">Send Message</button>
-
+                <input type="hidden" name="_next" value="thank-you.html">
             </form>
         </div>
 
@@ -1554,7 +1551,7 @@ document.querySelectorAll(".nav-link").forEach(link => {
 const form = document.querySelector(".message-form");
 
 form.addEventListener("submit", function (e) {
-    e.preventDefault();
+    alert("Sending message...");
 
     const name = form.querySelector("input[name='name']").value.trim();
     const email = form.querySelector("input[name='email']").value.trim();

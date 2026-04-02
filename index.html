@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Jonathan Githinji | Personal Portfolio</title>
-     <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="icon" type="image/png" href="images/favicon.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
  /* ============================================
@@ -19,7 +19,7 @@
     --text-muted: #a0a0a0;
     --bg-dark: #0f0f1a;
     --bg-card: #1f1f3a;
-   --gradient: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+   --gradient: linear-gradient (135deg, #1a1a2e 0%, #16213e 100%);
     --shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
     --transition: all 0.3s ease;
     --text-light: #f5f5f5;
@@ -1315,7 +1315,7 @@ animation effects
             <h3>Bachelor of Economics & Finance</h3>
             <p class="institution">Kenyatta University</p>
             <p class="duration">2021 – 2025</p>
-            <a href="document/JONATHAN CERTIFICATE AND TRANSCRIPT.pdf">View</a>
+            <a href="JONATHAN CERTIFICATE AND TRANSCRIPT.pdf">View</a>
         </div>
     </div>
 
@@ -1326,12 +1326,12 @@ animation effects
             
             <div class="card cert-item">
                 <span>CX for Business Success (HP LIFE)</span>
-              <a href="document/Customer_Experience_CX_for_Business_Success_1.pdf">View</a>
+              <a href="Customer_Experience_CX_for_Business_Success_1.pdf">View</a>
             </div>
 
             <div class="card cert-item">
                 <span>Basics of Finance (HP LIFE)</span>
-                <a href="document/Basics_of_Finance.pdf">View</a>
+                <a href="Basics_of_Finance.pdf">View</a>
             </div>
 
         </div>
@@ -1403,27 +1403,23 @@ animation effects
         <div class="contact-form">
             <h3 class="form-title">Send a Message</h3>
 
-         <div class="contact-form">
-    <h3 class="form-title">Send a Message</h3>
+          <form class="message-form" action="https://formspree.io/f/xojpvznk" method="POST"></form>
 
-    <form class="message-form" action="https://formspree.io/f/xojpvznk" method="POST">
-        <div class="form-group">
-            <input type="text" name="name" placeholder="Your Name" required>
-        </div>
+                <div class="form-group">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                </div>
 
-        <div class="form-group">
-            <input type="email" name="email" placeholder="Your Email" required>
-        </div>
+                <div class="form-group">
+                    <input type="email" name="email" placeholder="Your Email" required>
+                </div>
 
-        <div class="form-group">
-            <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
-        </div>
-
-        <input type="hidden" name="_next" value="thank-you.html">
-
-        <button type="submit" class="btn btn-primary">Send Message</button>
-    </form>
-</div>
+                <div class="form-group">
+                    <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
+                </div>
+              
+                <button type="submit" class="btn btn-primary">Send Message</button>
+                <input type="hidden" name="_next" value="thank-you.html">
+            </form>
         </div>
 
     </div>
@@ -1443,7 +1439,7 @@ animation effects
                         <li><a href="#about">About</a></li>
                         <li><a href="#skills">skills</a></li>
                         <li><a href="#experience">experience</a></li>
-                        <li><a href="#education-certivacation">Education</a></li>
+                        <li><a href="#education-certification">Education</a></li>
                         <li><a href="#contact">Contact</a></li>
                     </ul>
                 </div>
@@ -1571,36 +1567,7 @@ form.addEventListener("submit", function (e) {
 
 // Email validation function
 function validateEmail(email) {
-    return /^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/.test(email);
-}
-
-<script>
-function handleFormSubmit(form) {
-    // Simple validation (optional, Formspree also validates)
-    const name = form.name.value.trim();
-    const email = form.email.value.trim();
-    const message = form.message.value.trim();
-
-    if (!name || !email || !message) {
-        alert("Please fill in all fields.");
-        return false; // Prevent submission
-    }
-
-    // Validate email format
-    const emailRegex = /^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/;
-    if (!emailRegex.test(email)) {
-        alert("Please enter a valid email address.");
-        return false;
-    }
-
-    // Optionally show a message to the user
-    alert("Sending message...");
-
-    // Formspree will handle submission and redirect to _next URL
-    // Clear the form fields
-    form.reset();
-
-    return true; // Allow submission
+   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 }
 // ============================================
 // Animation effects
